@@ -1,6 +1,6 @@
 pipeline{
   agent any
-  steps{
+  stages{
     stage('build'){
       steps{
         echo 'compile maven app'
@@ -8,7 +8,7 @@ pipeline{
       } 
     }
   }
-  steps{
+  stages{
     stage('test'){
       steps{
         echo 'test maven app'
@@ -16,7 +16,7 @@ pipeline{
       } 
     }
   }
-  steps{
+  stages{
     stage('package'){
       steps{
         echo 'package maven app'
